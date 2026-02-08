@@ -170,7 +170,7 @@ function typeText() {
   if (i < message.length) {
     document.getElementById("msg").innerHTML += message.charAt(i);
     i++;
-    setTimeout(typeText, 45);
+    setTimeout(typeText, 35);
   } else {
     typeLove();
   }
@@ -182,7 +182,7 @@ function typeLove() {
   if (j < loveText.length) {
     document.getElementById("love").innerHTML += loveText.charAt(j);
     j++;
-    setTimeout(typeLove, 60);
+    setTimeout(typeLove, 50);
   }
 }
 </script>
