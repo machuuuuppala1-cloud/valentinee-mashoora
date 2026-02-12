@@ -6,13 +6,13 @@
 <title>😌💗</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Selima&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Selima', cursive;
 }
 
 body {
@@ -138,7 +138,9 @@ button {
 
 <div class="center" id="page1">
   <div class="box">
-    <h2>😌💗<br>Mashooraa,Will you be my Valentine? 😌💞</h2>
+    <div id="question" style="font-family: 'Selima', cursive; font-size: 2.2em; color: #111; text-align: center;">
+  Mashoora, Will you be my valentine? 💗
+    </div>
     <button id="yes" onclick="yesPage()">YES 🤍</button>
     <button id="no" ontouchstart="moveNo()">NO 😏</button>
   </div>
@@ -190,7 +192,9 @@ function moveNo() {
 function yesPage() {
   document.body.innerHTML = `
   <div class="second">
-    <h2>Yayyy, I knew that 😌💗</h2>
+    <div id="yayText" style="font-family: 'Selima', cursive; font-size: 2em; color: #111; text-align: center; margin-top: 10px;">
+  Yayy, I knew that! 💖
+</div>
     <img class="sticker" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWJ2dWJ1NXh6cHc3aTJyd2Y1Z2M5dHc5ZXl5OHJqM3h3N3R5eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MDJ9IbxxvDUQM/giphy.gif">
     <img class="sticker" src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
     <p class="typing" id="msg"></p>
