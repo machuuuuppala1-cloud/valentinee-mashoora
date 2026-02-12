@@ -91,19 +91,23 @@ button {
   box-shadow: 0 10px 30px rgba(255, 30, 86, 0.8); /* stronger glow on hover */
 }
 
-/* NO button: white with black glow */
 #no {
-  background: #ffffff; /* white */
-  color: #111; /* dark text */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6); /* black glow */
-  border-radius: 15px;
-  position: absolute;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;              /* white */
+  color: #111;                   /* dark text */
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 14px 22px;
+  border: none;
+  cursor: pointer;
+  position: absolute;            /* must be absolute for moving */
+  box-shadow: 0 0 15px #000, 0 5px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, top 0.5s ease, left 0.5s ease;
 }
 
+/* Optional hover effect (scale + glow) */
 #no:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8); /* stronger glow on hover */
+  box-shadow: 0 0 25px #000, 0 5px 25px rgba(0,0,0,0.6);
 }
 
 /* Second page */
