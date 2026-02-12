@@ -92,22 +92,22 @@ button {
 }
 
 #no {
-  background: #fff;
-  color: #111;
+  background: #fff;                   /* keep white */
+  color: #111;                        /* dark text */
   font-weight: 700;
   border-radius: 20px;
   padding: 14px 22px;
   border: none;
   cursor: pointer;
-  position: absolute;
-  box-shadow: 0 0 15px #000, 0 5px 15px rgba(0,0,0,0.4);
-  transition: top 0.5s ease, left 0.5s ease; /* <- added */
+  position: absolute;                 /* needed for moving */
+  box-shadow: 0 0 8px #000, 0 3px 8px rgba(0,0,0,0.3); /* softer glow */
+  transition: top 0.5s ease, left 0.5s ease, transform 0.3s ease;
 }
 
-/* Optional hover effect (scale + glow) */
+/* Optional hover effect */
 #no:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 25px #000, 0 5px 25px rgba(0,0,0,0.6);
+  box-shadow: 0 0 12px #000, 0 4px 12px rgba(0,0,0,0.4); /* softer hover glow */
 }
 
 /* Second page */
