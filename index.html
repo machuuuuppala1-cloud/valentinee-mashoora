@@ -137,20 +137,29 @@ setInterval(() => {
 
 /* NO button move + text */
 const noTexts = [
-  "Are you sure? 🤔",
-  "Think again 💭💗",
-  "Don’t break my heart 🥺💔",
-  "You know the answer 😏💌",
+  "No 😏💖",
+  "Are you sure? 🤔💘",
+  "Don't break my heart 💔🥹",
   "Still trying? 😅💕",
-  "It’s not too late to say YES ⏳💓",
-  "come on, say YES😒🤍",
-  "you can't escape this😏"
+  "You know the answer 😏💞",
+  "Think again 🔄💓💭"
 ];
+
+let currentIndex = 0;
+
 function moveNo() {
   const btn = document.getElementById("no");
-  btn.style.left = Math.random()*60 + "%";
-  btn.style.top = Math.random()*60 + "%";
-  btn.innerText = noTexts[Math.floor(Math.random()*noTexts.length)];
+
+  btn.style.left = Math.random() * 60 + "%";
+  btn.style.top = Math.random() * 60 + "%";
+
+  btn.innerText = noTexts[currentIndex];
+
+  currentIndex++;
+
+  if (currentIndex >= noTexts.length) {
+    currentIndex = 0;
+  }
 }
 
 /* YES PAGE */
