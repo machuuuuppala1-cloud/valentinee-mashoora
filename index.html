@@ -92,16 +92,16 @@ button {
 }
 
 #no {
-  background: #fff;              /* white */
-  color: #111;                   /* dark text */
+  background: #fff;
+  color: #111;
   font-weight: 700;
   border-radius: 20px;
   padding: 14px 22px;
   border: none;
   cursor: pointer;
-  position: absolute;            /* must be absolute for moving */
+  position: absolute;
   box-shadow: 0 0 15px #000, 0 5px 15px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, top 0.5s ease, left 0.5s ease;
+  transition: top 0.5s ease, left 0.5s ease; /* <- added */
 }
 
 /* Optional hover effect (scale + glow) */
