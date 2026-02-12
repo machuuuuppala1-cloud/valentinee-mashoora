@@ -91,25 +91,25 @@ button {
   box-shadow: 0 10px 30px rgba(255, 30, 86, 0.8); /* stronger glow on hover */
 }
 
+/* NO button: White with dark pink glow, smooth move */
 #no {
-  background: #fff;                   /* keep white */
-  color: #111;                        /* dark text */
+  background: #fff;               /* keep button white */
+  color: #111;                    /* dark text */
   font-weight: 700;
   border-radius: 20px;
   padding: 14px 22px;
   border: none;
   cursor: pointer;
-  position: absolute;                 /* needed for moving */
-  box-shadow: 0 0 8px #000, 0 3px 8px rgba(0,0,0,0.3); /* softer glow */
-  transition: top 0.5s ease, left 0.5s ease, transform 0.3s ease;
+  position: absolute;             /* needed for smooth movement */
+  box-shadow: 0 0 15px #e60073, 0 5px 15px rgba(230,0,115,0.4); /* dark pink glow */
+  transition: top 0.5s ease, left 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Optional hover effect */
 #no:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 12px #000, 0 4px 12px rgba(0,0,0,0.4); /* softer hover glow */
+  box-shadow: 0 0 25px #ff3385, 0 5px 25px rgba(230,0,115,0.6); /* slightly brighter on hover */
 }
-
+  
 /* Second page */
 .second {
   text-align: center;
