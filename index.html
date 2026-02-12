@@ -77,20 +77,33 @@ button {
   font-weight: 700;
 }
 
+/* YES button: dark pink gradient + pink glow */
 #yes {
-  background: #00d084;
-  color: #111;
+  background: linear-gradient(135deg, #ff1e56, #ff6584); /* dark pink gradient */
+  color: #111; /* dark text */
+  box-shadow: 0 8px 20px rgba(255, 30, 86, 0.6); /* pink glow */
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#no {
-  position: absolute;
-  background-color: #ff3b3b;
-  color: #111;
-  padding: 14px 22px;
-  border-radius: 15px;
+#yes:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 30, 86, 0.8); /* stronger glow on hover */
+}
 
-  /* THIS MAKES MOVEMENT SMOOTH */
-  transition: left 0.6s ease, top 0.6s ease;
+/* NO button: white with black glow */
+#no {
+  background: #ffffff; /* white */
+  color: #111; /* dark text */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6); /* black glow */
+  border-radius: 15px;
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#no:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8); /* stronger glow on hover */
 }
 
 /* Second page */
