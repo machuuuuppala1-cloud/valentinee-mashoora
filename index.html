@@ -14,7 +14,15 @@
   box-sizing: border-box;
   font-family: 'Selima', cursive;
 }
-
+  
+<script>
+document.getElementById("no").addEventListener("mouseover", function() {
+    this.style.position = "absolute";
+    this.style.left = Math.random() * 300 + "px";
+    this.style.top = Math.random() * 300 + "px";
+});
+</script>
+  
 body {
   height: 100vh;
   overflow: hidden;
