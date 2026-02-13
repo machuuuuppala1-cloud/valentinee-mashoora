@@ -15,13 +15,6 @@
   font-family: 'Selima', cursive;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-  }
-
 body {
   height: 100vh;
   overflow: hidden;
@@ -89,6 +82,13 @@ button {
   font-weight: 700;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+  
 /* YES button: dark pink gradient + pink glow */
 #yes {
   background: linear-gradient(135deg, #ff1e56, #ff6584); /* dark pink gradient */
@@ -150,7 +150,7 @@ button {
 <div class="center" id="page1">
   <div class="box">  
     <div id="question" style="font-family: 'Selima', cursive; font-size: 2.2em; color: #c70039; text-align: center;">
-  Mashoora, Will you be my valentine? 💗
+  Mashoora, Will you be my valentine?💗
     </div>
     <button id="yes" onclick="yesPage()">YES.</button>
     <button id="no" ontouchstart="moveNo()">NO.</button>
@@ -204,7 +204,7 @@ function yesPage() {
   document.body.innerHTML = `
   <div class="second">
     <div id="yayText" style="font-family: 'Selima', cursive; font-size: 2em; color: #111; text-align: center; margin-top: 10px;">
-  Yayy, I knew that! 💖
+  Yayy, I knew that! 😌💖
 </div>
     <img class="sticker" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWJ2dWJ1NXh6cHc3aTJyd2Y1Z2M5dHc5ZXl5OHJqM3h3N3R5eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MDJ9IbxxvDUQM/giphy.gif">
     <img class="sticker" src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
