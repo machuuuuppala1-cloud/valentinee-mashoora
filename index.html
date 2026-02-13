@@ -106,9 +106,6 @@ button {
 /* NO button: White with dark pink glow, smooth move */
 #no {
   position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
   background: #fff;               /* keep button white */
   color: #c70039;                    /* dark text */
   font-weight: 700;
@@ -190,18 +187,35 @@ let currentIndex = 0;
 
 function moveNo() {
   const btn = document.getElementById("no");
+  const yes = document.getElementById("yes");
+  const box = document.querySelector(".box");
 
-  btn.style.left = Math.random() * 60 + "%";
-  btn.style.top = Math.random() * 60 + "%";
+  const boxWidth = box.clientWidth - btn.offsetWidth;
+  const boxHeight = box.clientHeight - btn.offsetHeight;
+
+  let randomX, randomY;
+  let safe = false;
+
+  while (!safe) {
+    randomX = Math.random() * boxWidth;
+    randomY = Math.random() * boxHeight;
+
+    const yesRect = yes.getBoundingClientRect();
+
+    if (
+      randomX + btn.offsetWidth < yes.offsetLeft ||
+      randomX > yes.offsetLeft + yes.offsetWidth
+    ) {
+      safe = true;
+    }
+  }
+
+  btn.style.left = randomX + "px";
+  btn.style.top = randomY + "px";
 
   btn.innerText = noTexts[currentIndex];
-
-  currentIndex++;
-
-  if (currentIndex >= noTexts.length) {
-    currentIndex = 0;
+  currentIndex = (currentIndex + 1) % noTexts.length;
   }
-}
 
 /* YES PAGE */
 function yesPage() {
