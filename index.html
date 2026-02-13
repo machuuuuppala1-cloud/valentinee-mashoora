@@ -186,34 +186,17 @@ let currentIndex = 0;
 
 function moveNo() {
   const btn = document.getElementById("no");
-  const yes = document.getElementById("yes");
-  const box = document.querySelector(".box");
 
-  const boxWidth = box.clientWidth - btn.offsetWidth;
-  const boxHeight = box.clientHeight - btn.offsetHeight;
-
-  let randomX, randomY;
-  let safe = false;
-
-  while (!safe) {
-    randomX = Math.random() * boxWidth;
-    randomY = Math.random() * boxHeight;
-
-    const yesRect = yes.getBoundingClientRect();
-
-    if (
-      randomX + btn.offsetWidth < yes.offsetLeft ||
-      randomX > yes.offsetLeft + yes.offsetWidth
-    ) {
-      safe = true;
-    }
-  }
-
-  btn.style.left = randomX + "px";
-  btn.style.top = randomY + "px";
+  btn.style.left = Math.random() * 60 + "%";
+  btn.style.top = Math.random() * 60 + "%";
 
   btn.innerText = noTexts[currentIndex];
-  currentIndex = (currentIndex + 1) % noTexts.length;
+
+  currentIndex++;
+
+  if (currentIndex >= noTexts.length) {
+    currentIndex = 0;
+  }
   }
 
 /* YES PAGE */
